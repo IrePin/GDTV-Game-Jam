@@ -10,9 +10,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/[Aa]ssets/[_]Main/[Tt]hird_[Pp]arty/
-/[Tt]hirdPatry/
-/[Aa]ssets/GPT AI Integration
+/[Aa]ssets/[Tt]hirdPatry/
+/[Aa]ssets/[Gg]PT AI Integration
+/[Aa]ssets/[Cc]hat Logs
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
