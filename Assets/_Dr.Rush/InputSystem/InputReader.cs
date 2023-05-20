@@ -11,7 +11,7 @@ public class InputReader : ScriptableObject, MainControls.I_2DcontrolsActions, M
     private MainControls _mainControls;
 
     public event Action<Vector2> MoveEvent;
-    public event Action InteractEvent;
+    //public event Action InteractEvent;
 
     private void OnEnable()
     {
@@ -19,19 +19,19 @@ public class InputReader : ScriptableObject, MainControls.I_2DcontrolsActions, M
         {
             _mainControls = new MainControls();
             _mainControls._2Dcontrols.SetCallbacks(this);
-            //_mainControls._3Dcontrols.SetCallbacks(this);
             _mainControls.UI.SetCallbacks(this);
         }
+        Set2Dcontrols();
     }
 
-    private void OnDisable()
+    public void Set2Dcontrols()
     {
-        throw new NotImplementedException();
+        _mainControls._2Dcontrols.Enable();
+        _mainControls.UI.Disable();
     }
-
     public void OnMove2D(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        MoveEvent?.Invoke(context.ReadValue<Vector2>());
     }
 
     public void OnInteract(InputAction.CallbackContext context)
