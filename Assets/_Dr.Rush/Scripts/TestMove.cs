@@ -6,79 +6,79 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 _moveDirection;
 
+    [SerializeField] Animator _animator;
+    private float _velocityX;
+
     private Rigidbody _rb;
-    private bool _isGrounded;
-    private CapsuleCollider _collider;
+
     private RaycastHit _hit;
 
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
-    public LayerMask groundLayer;
     
+    [Header("GroundCheck")]
+    public LayerMask groundLayer;
+    public Transform groundCheck;
+    public bool isGrounded;
+    private static readonly int VelocityX = Animator.StringToHash("VelocityX");
+    private static readonly int Run = Animator.StringToHash("Run");
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _collider = GetComponent<CapsuleCollider>();
         _rb.useGravity = true;
         inputReader.MoveEvent += HandleMove;
     }
 
-    private void HandleMove(Vector2 dir)
+    private void Update()
     {
-        _moveDirection.x = dir.x;
-        _moveDirection.y = dir.y;
+        HandleAnimations();
+        Debug.Log(isGrounded);
     }
-
     void FixedUpdate()
     {
-        Move();
-        CheckGround();
+        CheckingGround();
         Jump();
-        Debug.Log(_isGrounded);
-        
+        Move();
+    }
+    private void HandleMove(Vector2 dir)
+    {
+        _moveDirection = dir;
     }
 
-    
+
+
+
     private void Move()
     {
-        if (_moveDirection == Vector2.zero)
-        {
-            return;
-        }
-
-        _rb.velocity = new Vector3(_moveDirection.x * moveSpeed, _rb.velocity.y, 0);
-
-       
-        {
-            Jump();
+        if (isGrounded){
+            _rb.velocity = new Vector3(_moveDirection.x * moveSpeed, _rb.velocity.y, 0);
         }
     }
-    
-    private void CheckGround()
-    {
-        RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, _collider.bounds.extents.y + 0.5f, groundLayer))
-        {
-            _isGrounded = true;
-        }
-        else if (Physics.Raycast(transform.position + Vector3.down * 0.1f, Vector3.down, out hit, _collider.bounds.extents.y + 0.5f, groundLayer))
-        {
-            _isGrounded = true;
-        }
-        else
-        {
-            _isGrounded = false;
-        }
+    void CheckingGround()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, 0.1f, groundLayer);
     }
 
     private void Jump()
     {
-        if (_moveDirection.y > 0 && _isGrounded)
+        if (_moveDirection.y > 0 && isGrounded)
         {
             _rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
         }
-        
+    }
+
+    private void HandleAnimations()
+    {
+        if (_moveDirection.x == 0)
+        {
+            _animator.SetBool(Run, false);
+        }
+        else
+        {
+            _animator.SetBool(Run, true);
+            _animator.SetFloat(VelocityX, _moveDirection.x);
+        }
     }
 }
