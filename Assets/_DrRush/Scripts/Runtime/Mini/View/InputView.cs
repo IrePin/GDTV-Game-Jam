@@ -1,10 +1,9 @@
 using System;
-using _DrRush;
+using Input;
 using RMC.Core.Architectures.Mini.Context;
 using RMC.Core.Architectures.Mini.View;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace _DrRush.Scripts.Runtime.Mini.View
 {
@@ -23,9 +22,12 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [HideInInspector] 
         public readonly OnInputUnityEvent OnInput = new OnInputUnityEvent();
 
-        [SerializeField] private InputReader inputReader;
-        
-        private Vector2 _moveDirection;
+        [field: Header("Components")]
+        //  Input ----------------------------------------
+        [field: SerializeField]
+        public InputReader inputReader { get; private set; }
+        //  Animator ----------------------------------------
+        public static Vector2 MoveDirection;
         //  Properties ------------------------------------
         public bool IsInitialized { get { return _isInitialized;} }
         public IContext Context { get { return _context;} }
@@ -33,26 +35,17 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         //  Fields ----------------------------------------
         private bool _isInitialized = false;
         private IContext _context;
-
+   
+        
         //  Initialization  -------------------------------
-
-        private void OnEnable()
-        {
-            inputReader.MoveEvent += HandleMove;
-        }
-
-        private void OnDisable()
-        {
-            inputReader.MoveEvent -= HandleMove;
-        }
-
-        public void Initialize(IContext context)
+       public void Initialize(IContext context)
         {
             if (!IsInitialized)
             {
                 _isInitialized = true;
                 _context = context;
-            } 
+            }
+
         }
 
         public void RequireIsInitialized()
@@ -76,23 +69,19 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             {
                 return;
             }
+            float moveHorizontal = inputReader.MovementValue.x * Time.deltaTime;
+            //float moveVertical = InputReader.MovementValue.x * Time.deltaTime;
+            Vector3 movementVector = new Vector3 (moveHorizontal, 0.0f, 0.0f);
+            Vector3 normalizedMovementVector = movementVector.normalized;
+            
 
-            float moveHorizontal = _moveDirection.x * Time.deltaTime;
-            Vector3 movement = new Vector3 (moveHorizontal, 0f, 0);
-
-            OnInput.Invoke(movement);
-            Debug.Log(IsInitialized);
+            OnInput.Invoke(normalizedMovementVector);
+            Debug.Log(normalizedMovementVector);
+            
+            MoveDirection = inputReader.MovementValue;
         }
-        
-        
-          private void HandleMove(Vector2 dir)
-                {
-                    _moveDirection = dir;
-                }
 
-          
         //  Methods ---------------------------------------
-        
         
         //  Event Handlers --------------------------------
 

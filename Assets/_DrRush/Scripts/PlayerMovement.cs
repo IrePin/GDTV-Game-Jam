@@ -1,10 +1,11 @@
+using Input;
 using UnityEngine;
 
 namespace _DrRush.Scripts
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private InputReader inputReader;
+        //[SerializeField] private InputReader inputReader;
 
         private Vector2 _moveDirection;
 
@@ -29,7 +30,7 @@ namespace _DrRush.Scripts
         {
             _rb = GetComponent<Rigidbody>();
             _rb.useGravity = true;
-            inputReader.MoveEvent += HandleMove;
+            //inputReader.MoveEvent += HandleMove;
         }
 
         private void Update()

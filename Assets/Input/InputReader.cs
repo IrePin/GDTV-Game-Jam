@@ -1,15 +1,19 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "InputReader", menuName = "Game/Input Reader")]
-    public class InputReader : ScriptableObject, MainControls.I_2DcontrolsActions, MainControls.IUIActions
+namespace Input
+{
+    public class InputReader : MonoBehaviour, MainControls.I_2DcontrolsActions, MainControls.IUIActions
     {
+        public bool IsAttacking { get; private set; }
+        public bool IsBlocking { get; private set; }
+
         private MainControls _mainControls;
 
         //public event Action InteractEvent;
-        public event UnityAction<Vector2> MoveEvent = delegate { };
-        
+        //public event UnityAction<Vector2> MoveEvent = delegate { };
+        public Vector2 MovementValue { get; private set; }
 
         private void OnEnable()
         {
@@ -31,7 +35,8 @@ using UnityEngine.Events;
 
         public void OnMove2D(InputAction.CallbackContext context)
         {
-            MoveEvent?.Invoke(context.ReadValue<Vector2>());
+            //MoveEvent?.Invoke(context.ReadValue<Vector2>());
+            MovementValue = context.ReadValue<Vector2>();
         }
 
         public void OnInteract(InputAction.CallbackContext context)
@@ -39,4 +44,5 @@ using UnityEngine.Events;
 
         }
     }
-    
+}
+   
