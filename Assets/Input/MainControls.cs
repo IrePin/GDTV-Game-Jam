@@ -44,6 +44,15 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Climb"",
+                    ""type"": ""Button"",
+                    ""id"": ""851d2f52-c826-4022-9791-7958131b2e5a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -57,17 +66,6 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
                     ""action"": ""Move2D"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""c6fa5b4c-a69a-4744-86fa-d23ed8d3a0b0"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move2D"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -99,6 +97,17 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ee66350a-fe1f-469c-b696-63dba9f0c35f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Climb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -145,6 +154,7 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
         m__2Dcontrols = asset.FindActionMap("2D controls", throwIfNotFound: true);
         m__2Dcontrols_Move2D = m__2Dcontrols.FindAction("Move2D", throwIfNotFound: true);
         m__2Dcontrols_Interact = m__2Dcontrols.FindAction("Interact", throwIfNotFound: true);
+        m__2Dcontrols_Climb = m__2Dcontrols.FindAction("Climb", throwIfNotFound: true);
         // 3D controls
         m__3Dcontrols = asset.FindActionMap("3D controls", throwIfNotFound: true);
         m__3Dcontrols_Newaction = m__3Dcontrols.FindAction("New action", throwIfNotFound: true);
@@ -213,12 +223,14 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
     private List<I_2DcontrolsActions> m__2DcontrolsActionsCallbackInterfaces = new List<I_2DcontrolsActions>();
     private readonly InputAction m__2Dcontrols_Move2D;
     private readonly InputAction m__2Dcontrols_Interact;
+    private readonly InputAction m__2Dcontrols_Climb;
     public struct _2DcontrolsActions
     {
         private @MainControls m_Wrapper;
         public _2DcontrolsActions(@MainControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move2D => m_Wrapper.m__2Dcontrols_Move2D;
         public InputAction @Interact => m_Wrapper.m__2Dcontrols_Interact;
+        public InputAction @Climb => m_Wrapper.m__2Dcontrols_Climb;
         public InputActionMap Get() { return m_Wrapper.m__2Dcontrols; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -234,6 +246,9 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Climb.started += instance.OnClimb;
+            @Climb.performed += instance.OnClimb;
+            @Climb.canceled += instance.OnClimb;
         }
 
         private void UnregisterCallbacks(I_2DcontrolsActions instance)
@@ -244,6 +259,9 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Climb.started -= instance.OnClimb;
+            @Climb.performed -= instance.OnClimb;
+            @Climb.canceled -= instance.OnClimb;
         }
 
         public void RemoveCallbacks(I_2DcontrolsActions instance)
@@ -349,6 +367,7 @@ public partial class @MainControls: IInputActionCollection2, IDisposable
     {
         void OnMove2D(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnClimb(InputAction.CallbackContext context);
     }
     public interface I_3DcontrolsActions
     {

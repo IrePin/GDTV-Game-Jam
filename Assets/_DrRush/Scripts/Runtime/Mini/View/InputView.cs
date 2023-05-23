@@ -21,13 +21,12 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         //  Events ----------------------------------------
         [HideInInspector] 
         public readonly OnInputUnityEvent OnInput = new OnInputUnityEvent();
+        
 
         [field: Header("Components")]
         //  Input ----------------------------------------
-        [field: SerializeField]
-        public InputReader inputReader { get; private set; }
-        //  Animator ----------------------------------------
-        public static Vector2 MoveDirection;
+        [field: SerializeField] public InputReader inputReader { get; private set; }
+        [NonSerialized] public static Vector2 MoveDirection;
         //  Properties ------------------------------------
         public bool IsInitialized { get { return _isInitialized;} }
         public IContext Context { get { return _context;} }
@@ -56,12 +55,6 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             }
         }
 
-        private void Start()
-        {
-            
-            Debug.Log("start");
-        }
-
         //  Unity Methods ---------------------------------
         protected void Update()
         {
@@ -70,14 +63,11 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 return;
             }
             float moveHorizontal = inputReader.MovementValue.x * Time.deltaTime;
-            //float moveVertical = InputReader.MovementValue.x * Time.deltaTime;
-            Vector3 movementVector = new Vector3 (moveHorizontal, 0.0f, 0.0f);
+            float moveVertical = inputReader.MovementValue.y * Time.deltaTime;
+            Vector3 movementVector = new Vector3 (moveHorizontal, 0.0f, moveVertical);
             Vector3 normalizedMovementVector = movementVector.normalized;
             
-
             OnInput.Invoke(normalizedMovementVector);
-            Debug.Log(normalizedMovementVector);
-            
             MoveDirection = inputReader.MovementValue;
         }
 

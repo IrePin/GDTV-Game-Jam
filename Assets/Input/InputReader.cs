@@ -11,9 +11,9 @@ namespace Input
 
         private MainControls _mainControls;
 
-        //public event Action InteractEvent;
-        //public event UnityAction<Vector2> MoveEvent = delegate { };
         public Vector2 MovementValue { get; private set; }
+        public event Action ClimbEvent;
+
 
         private void OnEnable()
         {
@@ -35,13 +35,19 @@ namespace Input
 
         public void OnMove2D(InputAction.CallbackContext context)
         {
-            //MoveEvent?.Invoke(context.ReadValue<Vector2>());
             MovementValue = context.ReadValue<Vector2>();
         }
 
         public void OnInteract(InputAction.CallbackContext context)
         {
 
+        }
+
+        public void OnClimb(InputAction.CallbackContext context)
+        {
+            if (!context.performed) { return; }
+            
+            ClimbEvent?.Invoke();
         }
     }
 }

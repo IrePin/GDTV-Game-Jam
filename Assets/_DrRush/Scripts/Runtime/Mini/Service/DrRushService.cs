@@ -40,7 +40,7 @@ namespace _DrRush.Scripts.Runtime.Mini.Service
         {
             RequireIsInitialized();
 
-            TextAsset textAsset = Resources.Load<TextAsset>("Texts/RollABallWithMiniText"); //txt file
+            TextAsset textAsset = Resources.Load<TextAsset>("Texts/DrRushText"); //txt file
 
             if (textAsset == null)
             {
