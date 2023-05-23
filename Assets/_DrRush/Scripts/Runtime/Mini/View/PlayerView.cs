@@ -32,6 +32,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         //  Fields ----------------------------------------
         [SerializeField] private Animator animator;
         [SerializeField] private CharacterController characterController;
+        [SerializeField] private GameObject lights;
         private bool _onLedge;
         private bool _isInitialized = false;
         private IContext _context;
@@ -40,8 +41,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         private readonly Vector3 Offset = new Vector3(0f, 2.325f, 0.65f);
         private Vector3 ledgeForward;
         private Vector3 closestPoint;
-        [SerializeField] 
-        private float speed = 10;
+        [SerializeField] private float speed = 10;
 
         private float _velocityY;
         private Vector3 _movement;
@@ -99,7 +99,18 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             if (pickupComponent != null)
             {
                 OnPickup.Invoke(pickupComponent);
-                
+            }
+
+            if (myCollider.CompareTag("ElShield"))
+            {
+               StartCoroutine(InteractCoroutine());
+               myCollider.enabled = false;
+            }
+
+            if (myCollider.CompareTag("Cargo"))
+            {
+                myCollider.attachedRigidbody.velocity = new Vector3(-1.5f, 0,0 );
+                Debug.Log(myCollider.tag);
             }
         }
 
@@ -176,22 +187,32 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         }
         private void RotateCharacter(Vector3 movement)
         {
-            transform.rotation = Quaternion.Lerp(
-                transform.rotation,
-                Quaternion.LookRotation(movement),
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(movement),
                 Time.deltaTime * _rotationDamping);
         }
         IEnumerator ClimbCoroutine(Vector3 closestPoint)
         {
             characterController.enabled = false;
             animator.SetFloat("VelocityX", 0);
-            transform.position = closestPoint - (LedgeDetector.transform.position - transform.position);
+            transform.position = closestPoint - (LedgeDetector.transform.position - transform.position) + new Vector3(0.05f,0,0);;
             animator.SetBool("OnLedge", true);
-            yield return new WaitForSeconds(3);
-            Debug.Log(closestPoint);
-            transform.position = closestPoint;
+            yield return new WaitForSeconds(2.5f);
+            transform.position = closestPoint + new Vector3(0.1f, 0, 0);
             animator.SetBool("OnLedge", false);
             characterController.enabled = true;
         }
+
+        IEnumerator InteractCoroutine()
+        {
+            characterController.enabled = false;
+            animator.SetBool("Interact",true);
+            yield return new WaitForSeconds(1);
+            animator.SetBool("Interact",false);
+            yield return new WaitForSeconds(1);
+            lights.gameObject.SetActive(true);
+            yield return new WaitForSeconds(1);
+            characterController.enabled = true;
+        }
+
     }
 }

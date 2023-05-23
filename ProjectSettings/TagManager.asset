@@ -7,6 +7,11 @@ TagManager:
   - Pick Up
   - Climb
   - ClosePoint
+  - ElShield
+  - Light
+  - Cargo
+  - Button
+  - Teleport
   layers:
   - Default
   - TransparentFX
