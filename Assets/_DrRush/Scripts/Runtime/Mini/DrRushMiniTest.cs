@@ -27,6 +27,9 @@ namespace _DrRush.Scripts.Runtime.Mini
         private PlayerView _playerView;
 
         [SerializeField] 
+        private ShooterView _shooterView;
+        
+        [SerializeField] 
         private UIView _uiView;
 
         
@@ -34,7 +37,7 @@ namespace _DrRush.Scripts.Runtime.Mini
         protected void Start()
         {
             DrRushMini drRushMini = 
-                new DrRushMini(_inputView, _playerView, _uiView);
+                new DrRushMini(_inputView, _playerView, _uiView, _shooterView);
             
             drRushMini.Initialize();
         }

@@ -41,6 +41,7 @@ namespace _DrRush.Scripts.Runtime.Mini.Controller
         private PlayerView _playerView;
         private UIView _uiView;
         private InputView _inputView;
+        private ShooterView _shooterView;
         
         //Controller
         //private AudioController _audioController;
@@ -53,14 +54,17 @@ namespace _DrRush.Scripts.Runtime.Mini.Controller
             DrRushModel model, 
             InputView inputView, 
             PlayerView playerView, 
+            ShooterView shooterView,
             UIView uiView, 
             DrRushService service)
         {
             _model = model;
             _inputView = inputView;
             _playerView = playerView;
+            _shooterView = shooterView;
             _uiView = uiView;
             _service = service;
+            
         }
 
         public void Initialize(IContext context)
@@ -79,7 +83,8 @@ namespace _DrRush.Scripts.Runtime.Mini.Controller
                 //View
                 _inputView.OnInput.AddListener(InputView_OnInput);
                 _uiView.OnRestart.AddListener(UIView_OnRestart);
-                _playerView.OnPickup.AddListener(PlayerView_OnPickup);
+                //_playerView.OnPickup.AddListener(PlayerView_OnPickup);
+                _shooterView.OnPickup.AddListener(ShooterView_OnPickup);
                 
                 //Service
                 _service.OnLoaded.AddListener(Service_OnLoaded);
@@ -151,7 +156,7 @@ namespace _DrRush.Scripts.Runtime.Mini.Controller
             Context.CommandManager.InvokeCommand(new InputCommand(input));
         }
         
-        public void PlayerView_OnPickup(PickupComponent pickupComponent)
+        public void ShooterView_OnPickup(PickupComponent pickupComponent)
         {
             RequireIsInitialized();
 

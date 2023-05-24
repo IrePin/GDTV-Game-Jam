@@ -26,6 +26,7 @@ namespace _DrRush.Scripts.Runtime.Mini
         public DrRushModel DrRushModel { get { return _drRushModel;} }
         public InputView InputView { get { return _inputView;} }
         public PlayerView PlayerView { get { return _playerView;} }
+        public ShooterView ShooterView { get { return _shooterView;} }
         public UIView UIView { get { return _uiView;} }
         public DrRushController DrRushController { get { return _drRushController;} }
         //public AudioController AudioController { get { return _audioController;} }
@@ -44,6 +45,7 @@ namespace _DrRush.Scripts.Runtime.Mini
         //View
         private InputView _inputView;
         private PlayerView _playerView;
+        private ShooterView _shooterView;
         private UIView _uiView;
         
         //Controller
@@ -55,10 +57,11 @@ namespace _DrRush.Scripts.Runtime.Mini
 
 
         //  Initialization  -------------------------------
-        public DrRushMini(InputView inputView, PlayerView playerView, UIView uiView)
+        public DrRushMini(InputView inputView, PlayerView playerView, UIView uiView, ShooterView shooterView)
         {
             _inputView = inputView;
             _playerView = playerView;
+            _shooterView = shooterView;
             _uiView = uiView;
         }
         
@@ -84,7 +87,8 @@ namespace _DrRush.Scripts.Runtime.Mini
                     _drRushModel, 
                     _inputView, 
                     _playerView, 
-                    _uiView, 
+                    _shooterView,
+                    _uiView,
                     _drRushService);
             
                 //Model
@@ -93,6 +97,7 @@ namespace _DrRush.Scripts.Runtime.Mini
                 //View
                 _inputView.Initialize(_context);
                 _playerView.Initialize(_context);
+                _shooterView.Initialize(_context);
                 _uiView.Initialize(_context);
                 
                 //Service

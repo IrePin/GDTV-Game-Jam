@@ -26,6 +26,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [field: Header("Components")]
         //  Input ----------------------------------------
         [field: SerializeField] public InputReader inputReader { get; private set; }
+        
         [NonSerialized] public static Vector2 MoveDirection;
         //  Properties ------------------------------------
         public bool IsInitialized { get { return _isInitialized;} }

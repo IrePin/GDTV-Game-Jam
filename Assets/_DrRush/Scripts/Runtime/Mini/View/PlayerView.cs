@@ -6,13 +6,14 @@ using RMC.Core.Architectures.Mini.Context;
 using RMC.Core.Architectures.Mini.View;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace _DrRush.Scripts.Runtime.Mini.View
 {
     //  Namespace Properties ------------------------------
 
     //  Class Attributes ----------------------------------
-    public class PickupUnityEvent : UnityEvent<PickupComponent> {}
+    //public class PickupUnityEvent : UnityEvent<PickupComponent> {}
 
     /// <summary>
     /// The View handles user interface and user input
@@ -28,6 +29,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         public IContext Context { get { return _context;} }
         
         [field: SerializeField] public LedgeDetector LedgeDetector { get; private set; }
+        [field: SerializeField] public InputView InputView { get; private set; }
         
         //  Fields ----------------------------------------
         [SerializeField] private Animator animator;
@@ -50,6 +52,8 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [Header("GroundCheck")]
         public float gravity = -9.81f;
         public Vector3 velocity;
+
+        private Scene currentScene;
         
 
         
@@ -70,15 +74,20 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 
                 Context.CommandManager.AddCommandListener<InputCommand>(
                     OnInputCommand);
+                currentScene = SceneManager.GetActiveScene();
+                InputView.inputReader.ClimbEvent += OnClimb;
                 LedgeDetector.OnLedgeDetect += OnLedge;
             }
         }
 
+        private void OnClimb()
+        {
+            OnLedge(ledgeForward, closestPoint);
+        }
+
         private void OnLedge(Vector3 ledgeForward, Vector3 closestPoint)
         {
-            
             StartCoroutine(ClimbCoroutine(closestPoint));
-           
         }
 
         public void RequireIsInitialized()
@@ -93,13 +102,13 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         //  Unity Methods ---------------------------------
      protected void OnTriggerEnter(Collider myCollider) 
         {
-            RequireIsInitialized();
+            /*RequireIsInitialized();
             // Did I collide with the correct object?
             PickupComponent pickupComponent = myCollider.gameObject.GetComponent<PickupComponent>();
             if (pickupComponent != null)
             {
                 OnPickup.Invoke(pickupComponent);
-            }
+            }*/
 
             if (myCollider.CompareTag("ElShield"))
             {
@@ -116,17 +125,22 @@ namespace _DrRush.Scripts.Runtime.Mini.View
 
         private void FixedUpdate()
         {
-            _movement = transform.position;
-            RotateCharacter(_movement);
-            AnimationsID();
-            HandleGravity();
-            HandleAnimator();
+            if (currentScene.name == "MadHospital")
+            { 
+                _movement = transform.position;
+                RotateCharacter(_movement);
+                AnimationsID();
+                HandleGravity();
+                HandleAnimator();
+            
+            }
         }
         protected void OnDisable()
         {
             Context?.CommandManager?.RemoveCommandListener<InputCommand>(
                 OnInputCommand);
             LedgeDetector.OnLedgeDetect -= OnLedge;
+            InputView.inputReader.ClimbEvent -= OnClimb;
             
         }
 
@@ -134,9 +148,18 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         private void OnInputCommand(InputCommand inputCommand)
         {
             RequireIsInitialized();
+         
+            if (currentScene.name == "MadHospital")
+            {
+                Vector3 movement = transform.TransformDirection(inputCommand.Value);
+                characterController.Move(movement * Time.deltaTime * speed);
+                Debug.Log(movement);
+            }
 
-            Vector3 movement = transform.TransformDirection(inputCommand.Value);
-            characterController.Move(movement * Time.deltaTime * speed);
+            if (currentScene.name == "ShooterScene")
+            {
+                return;
+            }
         }
         //  Methods ---------------------------------------
         private void AnimationsID()

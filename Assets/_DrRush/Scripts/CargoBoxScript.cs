@@ -34,8 +34,6 @@ namespace _DrRush.Scripts
                     particle.enabled = true;
                     teleporter.enabled = true;
                 }
-                
-                
             }
         }
     }
