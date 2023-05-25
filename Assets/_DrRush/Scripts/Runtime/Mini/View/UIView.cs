@@ -4,6 +4,7 @@ using RMC.Core.Architectures.Mini.Context;
 using RMC.Core.Architectures.Mini.View;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _DrRush.Scripts.Runtime.Mini.View
@@ -12,6 +13,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
 
     //  Class Attributes ----------------------------------
     public class OnRestartUnityEvent : UnityEvent<DialogView> {}
+    public class OnPlayUnityEvent : UnityEvent {}
 
     /// <summary>
     /// The View handles user interface and user input
@@ -21,6 +23,8 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         //  Events ----------------------------------------
         [HideInInspector]
         public readonly OnRestartUnityEvent OnRestart = new OnRestartUnityEvent();
+        
+        public readonly OnPlayUnityEvent OnPlay = new OnPlayUnityEvent();
 
         //  Properties ------------------------------------
         public bool IsInitialized { get { return _isInitialized;} }
@@ -37,11 +41,13 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         private Text _statusText;
 
         [SerializeField] 
-        private Button _restartButton;
-
+        private Button restartButton;
+        [SerializeField] 
+        private Button playButton;
+        
         [SerializeField] 
         private DialogView _dialogViewPrefab;
-
+      
         private int _score = 0;
         private int _scoreMax = 0;
         
@@ -53,13 +59,18 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 _isInitialized = true;
                 _context = context;
 
-                if (_restartButton != null)
+                if (restartButton != null)
                 {
-                    _restartButton.onClick.AddListener(() =>
+                    restartButton.onClick.AddListener(() =>
                     {
                         OnRestart.Invoke(_dialogViewPrefab);
                     });
                 }
+                
+                playButton.onClick.AddListener(() =>
+                {
+                    OnPlay.Invoke();
+                });
                 
                 //
                 Context.CommandManager.AddCommandListener<ScoreChangedCommand>(

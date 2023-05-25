@@ -141,7 +141,7 @@ Transform:
   - {fileID: 4494744277852732332}
   - {fileID: 7148045964970175861}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &3993812287119801950
 CharacterController:
@@ -181,11 +181,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93240baf79c2cc14cba6b80824f6cae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <InputView>k__BackingField: {fileID: 0}
+  <InputView>k__BackingField: {fileID: 762780033052046772, guid: b30ae802efab5654aa7331be85b841d2, type: 3}
   shooterCharController: {fileID: 3993812287119801950}
   gravity: -9.81
   velocity: {x: 0, y: 0, z: 0}
-  _speed: 0.1
+  speed: 0
+  CinemachineCameraTarget: {fileID: 0}
+  rotationVelocity: 0
+  topClamp: 90
+  bottomClamp: -90
 --- !u!1 &6254176267088595593
 GameObject:
   m_ObjectHideFlags: 0

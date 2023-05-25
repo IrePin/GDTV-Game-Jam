@@ -83,6 +83,7 @@ namespace _DrRush.Scripts.Runtime.Mini.Controller
                 //View
                 _inputView.OnInput.AddListener(InputView_OnInput);
                 _uiView.OnRestart.AddListener(UIView_OnRestart);
+                _uiView.OnPlay.AddListener(UIView_OnPlay);
                 //_playerView.OnPickup.AddListener(PlayerView_OnPickup);
                 _shooterView.OnPickup.AddListener(ShooterView_OnPickup);
                 
@@ -127,14 +128,20 @@ namespace _DrRush.Scripts.Runtime.Mini.Controller
             dialogView.OnConfirm.AddListener(() =>
             {
                 GameObject.Destroy(dialogView.gameObject);
-                SceneManager.LoadScene("Prototype_1");
+                SceneManager.LoadScene("MadHospital");
                 
                 //Unpause
                 _model.IsGamePaused.Value = false;
             });
         }
+
+        private void UIView_OnPlay()
+        {
+             SceneManager.LoadScene("MadHospital");
+        }
         
-        
+
+
         private void Service_OnLoaded()
         {
             RequireIsInitialized();

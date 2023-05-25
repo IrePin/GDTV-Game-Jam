@@ -156,10 +156,12 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 Debug.Log(movement);
             }
 
-            if (currentScene.name == "ShooterScene")
+            if (currentScene.name == "ShooterScene" && currentScene.name == "MainMenu" )
             {
                 return;
             }
+            
+            
         }
         //  Methods ---------------------------------------
         private void AnimationsID()

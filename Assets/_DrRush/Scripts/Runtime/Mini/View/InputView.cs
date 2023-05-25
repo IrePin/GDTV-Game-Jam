@@ -21,7 +21,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         //  Events ----------------------------------------
         [HideInInspector] 
         public readonly OnInputUnityEvent OnInput = new OnInputUnityEvent();
-        
+       
 
         [field: Header("Components")]
         //  Input ----------------------------------------

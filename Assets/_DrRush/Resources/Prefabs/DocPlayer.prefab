@@ -245,7 +245,7 @@ Transform:
   - {fileID: 2105413747113570197}
   - {fileID: 5031631013482178635}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &1878126395236862720
 CharacterController:
@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <LedgeDetector>k__BackingField: {fileID: 1316488161307803923}
+  <InputView>k__BackingField: {fileID: 762780033052046772, guid: b30ae802efab5654aa7331be85b841d2, type: 3}
   animator: {fileID: 5735471604907795331}
   characterController: {fileID: 1878126395236862720}
   lights: {fileID: 0}

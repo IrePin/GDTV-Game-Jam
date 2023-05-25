@@ -35,6 +35,10 @@ namespace Input
             {
                 Set3Dcontrols();
                 Debug.Log("shooter controls enabled");
+            }else if (currentScene.name == "MainMenu")
+            {
+                SetUI();
+                Debug.Log("UI enabled");
             }
         }
 

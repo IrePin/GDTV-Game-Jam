@@ -34,7 +34,7 @@ RectTransform:
   m_Children:
   - {fileID: 1899108466758334593}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -59,6 +59,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
@@ -116,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bodyText: {fileID: 2548703612993956881}
   _cancelButton: {fileID: 146482575869110582}
-  _confirmButton: {fileID: 3535018969233583165}
+  _confirmButton: {fileID: 1940589947687799229}
 --- !u!1 &1110415892263526337
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +494,7 @@ GameObject:
   - component: {fileID: 1646086716878746928}
   - component: {fileID: 5104728908974654645}
   - component: {fileID: 6344849943747732268}
-  - component: {fileID: 3535018969233583165}
+  - component: {fileID: 1940589947687799229}
   m_Layer: 5
   m_Name: ConfirmButton
   m_TagString: Untagged
@@ -560,7 +561,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3535018969233583165
+--- !u!114 &1940589947687799229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
