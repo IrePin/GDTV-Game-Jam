@@ -3,6 +3,7 @@ using _DrRush.Scripts.Runtime.Components;
 using _DrRush.Scripts.Runtime.Mini.Controller.Commands;
 using RMC.Core.Architectures.Mini.Context;
 using RMC.Core.Architectures.Mini.View;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem.Controls;
@@ -40,6 +41,8 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [SerializeField] private float topClamp = 90.0f;
         [SerializeField] private float bottomClamp = -90.0f;
 
+        [SerializeField] private Animator animator;
+
         public void Initialize(IContext context)
         {
             if (!IsInitialized)
@@ -64,6 +67,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         {
             HandleGravity();
             CameraRotation();
+            HandleAnimations();
         }
 
         private void OnInputCommand(InputCommand inputCommand)
@@ -72,7 +76,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             
             Vector3 movement = transform.TransformDirection(inputCommand.Value);
             shooterCharController.Move((movement * speed) * Time.deltaTime);
-            Debug.Log(movement);
+            Debug.Log(inputCommand);
         }
 
         protected void OnTriggerEnter(Collider myCollider)
@@ -137,9 +141,20 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             if (lfAngle > 360f) lfAngle -= 360f;
             return Mathf.Clamp(lfAngle, lfMin, lfMax);
         }
-        
-        
 
+
+        private void HandleAnimations()
+        {
+            if (InputView.inputReader.MovementValue.x > 0f || InputView.inputReader.MovementValue.y > 0f || InputView.inputReader.MovementValue.x < 0f || InputView.inputReader.MovementValue.y < 0f)
+            {
+                animator.SetBool("Walk", true);
+            }
+            else
+            {
+                animator.SetBool("Walk", false);
+            }
+               
+        }
 
 
     }

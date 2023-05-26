@@ -12,6 +12,8 @@ TagManager:
   - Cargo
   - Button
   - Teleport
+  - CinemachineTarget
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Climb
-  - 
+  - Gun
   - 
   - 
   - 

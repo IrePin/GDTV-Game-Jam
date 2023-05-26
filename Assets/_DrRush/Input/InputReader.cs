@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-namespace Input
+namespace _DrRush.Input
 {
     public class InputReader : MonoBehaviour, MainControls.I_2DcontrolsActions, MainControls.IUIActions, MainControls.I_3DcontrolsActions
     {
@@ -13,7 +13,7 @@ namespace Input
         public Vector2 look { get; private set; }
         
         public event Action ClimbEvent;
-        public event Action ShootEvent;
+        public static event Action ShootEvent;
 
 
         private void OnEnable()
@@ -66,6 +66,7 @@ namespace Input
         public void OnMove2D(InputAction.CallbackContext context)
         {
             MovementValue = context.ReadValue<Vector2>();
+            Debug.Log(MovementValue);
         }
 
         public void OnInteract(InputAction.CallbackContext context)
