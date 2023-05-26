@@ -1,5 +1,5 @@
 using System;
-using Input;
+using _DrRush.Input;
 using RMC.Core.Architectures.Mini.Context;
 using RMC.Core.Architectures.Mini.View;
 using UnityEngine;
@@ -70,6 +70,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             
             OnInput.Invoke(normalizedMovementVector);
             MoveDirection = inputReader.MovementValue;
+            //Debug.Log(inputReader.MovementValue);
         }
 
         //  Methods ---------------------------------------
