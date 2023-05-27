@@ -40,9 +40,9 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         private IContext _context;
         private Vector2 _currentAnimationBlendVector;
         private Vector2 _animationVelocity;
-        private readonly Vector3 Offset = new Vector3(0f, 2.325f, 0.65f);
-        private Vector3 ledgeForward;
-        private Vector3 closestPoint;
+        private readonly Vector3 _offset = new Vector3(0f, 2.325f, 0.65f);
+        private Vector3 _ledgeForward;
+        private Vector3 _closestPoint;
         [SerializeField] private float speed = 10;
 
         private float _velocityY;
@@ -53,7 +53,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         public float gravity = -9.81f;
         public Vector3 velocity;
 
-        private Scene currentScene;
+        private Scene _currentScene;
         
 
         
@@ -74,7 +74,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 
                 Context.CommandManager.AddCommandListener<InputCommand>(
                     OnInputCommand);
-                currentScene = SceneManager.GetActiveScene();
+                _currentScene = SceneManager.GetActiveScene();
                 InputView.inputReader.ClimbEvent += OnClimb;
                 LedgeDetector.OnLedgeDetect += OnLedge;
             }
@@ -82,7 +82,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
 
         private void OnClimb()
         {
-            OnLedge(ledgeForward, closestPoint);
+            //OnLedge(_ledgeForward, _closestPoint);
         }
 
         private void OnLedge(Vector3 ledgeForward, Vector3 closestPoint)
@@ -125,7 +125,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
 
         private void FixedUpdate()
         {
-            if (currentScene.name == "MadHospital")
+            if (_currentScene.name == "MadHospital")
             { 
                 _movement = transform.position;
                 RotateCharacter(_movement);
@@ -149,14 +149,14 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         {
             RequireIsInitialized();
          
-            if (currentScene.name == "MadHospital")
+            if (_currentScene.name == "MadHospital")
             {
                 Vector3 movement = transform.TransformDirection(inputCommand.Value);
                 characterController.Move(movement * Time.deltaTime * speed);
                 Debug.Log(movement);
             }
 
-            if (currentScene.name == "ShooterScene" && currentScene.name == "MainMenu" )
+            if (_currentScene.name == "ShooterScene" && _currentScene.name == "MainMenu" )
             {
                 return;
             }

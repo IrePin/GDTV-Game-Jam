@@ -6,7 +6,7 @@ using RMC.Core.Architectures.Mini.View;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 
@@ -31,7 +31,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         public Vector3 velocity;
         [SerializeField] private float speed;
         
-        
+        private Scene _currentScene;
         
         // cinemachine
         [SerializeField] GameObject CinemachineCameraTarget;
@@ -54,8 +54,12 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 Context.CommandManager.AddCommandListener<InputCommand>(
                     OnInputCommand);
             }
-
-            Cursor.lockState = CursorLockMode.Locked;
+            _currentScene = SceneManager.GetActiveScene();
+            if (_currentScene.name != "MainMenu")
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            
         }
 
         public void RequireIsInitialized()

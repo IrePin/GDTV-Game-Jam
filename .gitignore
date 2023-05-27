@@ -13,6 +13,9 @@
 /[Aa]ssets/[Tt]hirdPatry/
 /[Aa]ssets/[Gg]PT AI Integration
 /[Aa]ssets/[Cc]hat Logs
+/[Aa]ssets/StreamingAssets/**/*.bank
+/[Aa]ssets/StreamingAssets/**/*.bank.meta
+/[Aa]ssets/Plugins/FMOD/Cache/*
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

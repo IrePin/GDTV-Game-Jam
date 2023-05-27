@@ -31,13 +31,6 @@ public class CustomTeleporter : MonoBehaviour
 	//gameobjects inside the pad
 	private Transform subject;
 	//add a sound component if you want the teleport playing a sound when teleporting
-	public AudioSource teleportSound;
-	//add a sound component for the teleport pad, vibrating for example, or music if you want :D
-	//also to make it more apparent when the pad is off, stop this component playing with "teleportPadSound.Stop();"
-	//PS the distance is set to 10 units, so you only hear it standing close, not from the other side of the map
-	public AudioSource teleportPadSound;
-	//simple enable/disable function in case you want the teleport not working at some point
-	//without disabling the entire script, so receiving objects still works
 	public bool teleportPadOn = true;
 
 	void Start ()
@@ -54,7 +47,7 @@ public class CustomTeleporter : MonoBehaviour
 		{
 			//if that object hasnt just arrived from another pad, teleport it
 			if(!arrived && teleportPadOn)
-			Teleport();
+				Teleport();
 		}
 	}
 
