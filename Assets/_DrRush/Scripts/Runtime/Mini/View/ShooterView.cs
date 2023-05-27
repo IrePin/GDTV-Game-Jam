@@ -32,6 +32,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [SerializeField] private float speed;
         
         
+        
         // cinemachine
         [SerializeField] GameObject CinemachineCameraTarget;
         private float _cinemachineTargetPitch;
@@ -53,6 +54,8 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 Context.CommandManager.AddCommandListener<InputCommand>(
                     OnInputCommand);
             }
+
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void RequireIsInitialized()
