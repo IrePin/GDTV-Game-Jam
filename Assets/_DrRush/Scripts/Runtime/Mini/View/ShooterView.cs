@@ -53,6 +53,8 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 Context.CommandManager.AddCommandListener<InputCommand>(
                     OnInputCommand);
             }
+
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void RequireIsInitialized()
