@@ -1558,6 +1558,11 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6401142150485911778, guid: 34b25640451679f41a1f8dfc077d4e5d, type: 3}
   m_PrefabInstance: {fileID: 1095970690}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1672994363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2514232726141453053, guid: 8722992691d2d6749a823fc58a029e69, type: 3}
+  m_PrefabInstance: {fileID: 35883265462299041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1737938127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,6 +2057,10 @@ PrefabInstance:
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 1634751714}
+    - target: {fileID: 3011479342260285485, guid: 8722992691d2d6749a823fc58a029e69, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 2898355216064862740}
     - target: {fileID: 7027253965815791538, guid: 8722992691d2d6749a823fc58a029e69, type: 3}
       propertyPath: <InputView>k__BackingField
       value: 
@@ -2059,7 +2068,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2514232726141453053, guid: 8722992691d2d6749a823fc58a029e69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2898355216064862740}
   m_SourcePrefab: {fileID: 100100000, guid: 8722992691d2d6749a823fc58a029e69, type: 3}
 --- !u!1001 &334574959226019045
 PrefabInstance:
@@ -2154,7 +2166,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7027253965815791538, guid: 8722992691d2d6749a823fc58a029e69, type: 3}
   m_PrefabInstance: {fileID: 35883265462299041}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1672994363}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93240baf79c2cc14cba6b80824f6cae5, type: 3}
@@ -2165,3 +2177,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1436661801904153383, guid: 8722992691d2d6749a823fc58a029e69, type: 3}
   m_PrefabInstance: {fileID: 35883265462299041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2898355216064862740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672994363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca9c24d9531cec42a8f5db82b112ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  maxArmor: 50

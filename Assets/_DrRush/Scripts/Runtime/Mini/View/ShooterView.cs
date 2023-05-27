@@ -32,6 +32,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [SerializeField] private float speed;
         
         
+        
         // cinemachine
         [SerializeField] GameObject CinemachineCameraTarget;
         private float _cinemachineTargetPitch;

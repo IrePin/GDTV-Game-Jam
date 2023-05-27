@@ -6,6 +6,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private EnemyManager enemyManager;
     [SerializeField] private InputReader inputReader;
     [SerializeField] private BoxCollider gunTrigger;
+    [SerializeField] private PlayerHealth playerHealth;
 
     private float _distance;
     private const float Range = 50F;
