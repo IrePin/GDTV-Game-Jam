@@ -1,4 +1,5 @@
 using _DrRush.Input;
+using _DrRush.Scripts.ShooterCrutch.Enemy;
 using UnityEngine;
 
 public class Gun : MonoBehaviour

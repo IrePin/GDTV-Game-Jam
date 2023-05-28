@@ -1,30 +1,35 @@
-using Unity.Mathematics;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+namespace _DrRush.Scripts.ShooterCrutch.Enemy
 {
-    [SerializeField] private EnemyManager enemyManager;
-    [SerializeField] private float enemyHealth;
-
-    [SerializeField] private GameObject damageTakeEffectPrefab;
-
-    void Start()
+    public class Enemy : MonoBehaviour
     {
+        [SerializeField] private EnemyManager enemyManager;
+        [SerializeField] private float enemyHealth;
+        [SerializeField] private GameObject damageTakeEffectPrefab;
+        [SerializeField] private Animator spriteAnim;
+        private AngleToPlayer _angleToPlayer;
+        private static readonly int SpriteRotation = Animator.StringToHash("SpriteRotation");
 
-    }
-
-    private void Update()
-    {
-        if (enemyHealth <= 0)
+        void Start()
         {
-            enemyManager.RemoveEnemy(this);
-            Destroy(gameObject);
+            _angleToPlayer = GetComponent<AngleToPlayer>();
         }
-    }
 
-    public void TakeDamage(float damage)
-    {
-        Instantiate(damageTakeEffectPrefab, transform.position, transform.rotation);
-        enemyHealth -= damage;
+        private void Update()
+        {
+            spriteAnim.SetFloat(SpriteRotation, _angleToPlayer.lastIndex);
+            if (enemyHealth <= 0)
+            {
+                enemyManager.RemoveEnemy(this);
+                Destroy(gameObject);
+            }
+        }
+
+        public void TakeDamage(float damage)
+        {
+            Instantiate(damageTakeEffectPrefab, transform.position, transform.rotation);
+            enemyHealth -= damage;
+        }
     }
 }

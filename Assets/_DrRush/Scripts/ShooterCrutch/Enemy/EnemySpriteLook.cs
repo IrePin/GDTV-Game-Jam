@@ -7,6 +7,7 @@ public class EnemySpriteLook : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
     private Transform _targetTransform;
+    public bool canLookVerticaly;
 
     private void Start()
     {
@@ -15,6 +16,16 @@ public class EnemySpriteLook : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(_targetTransform);
+        if (canLookVerticaly)
+        {
+           transform.LookAt(_targetTransform); 
+        }
+        else
+        {
+            Vector3 modifiedTarget = _targetTransform.position;
+            modifiedTarget.y = transform.position.y;
+            transform.LookAt(modifiedTarget); 
+        }
+        
     }
 }

@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 4083119160232556285}
   - component: {fileID: 3764175655053358165}
   - component: {fileID: 7027253965815791538}
+  - component: {fileID: 8470263118124643495}
   m_Layer: 8
   m_Name: ShooterCapsule
   m_TagString: Player
@@ -298,6 +299,20 @@ MonoBehaviour:
   topClamp: 90
   bottomClamp: -90
   animator: {fileID: 4083119160232556285}
+--- !u!114 &8470263118124643495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514232726141453053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca9c24d9531cec42a8f5db82b112ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  maxArmor: 50
 --- !u!1 &4022273095461807255
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +406,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b911390c5825014e8377183a7837d3f, type: 2}
+  - {fileID: -1580535799172915004, guid: c08c3d6358f60c14f99b0899d6159839, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -430,7 +445,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -594,6 +609,10 @@ PrefabInstance:
       propertyPath: smallDamage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 8470263118124643495}
     - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: gunShotRadius
       value: 10

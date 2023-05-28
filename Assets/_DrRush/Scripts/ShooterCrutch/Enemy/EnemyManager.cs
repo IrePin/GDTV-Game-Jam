@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _DrRush.Scripts.ShooterCrutch.Enemy;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour

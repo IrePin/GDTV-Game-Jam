@@ -1,0 +1,1202 @@
+fileFormatVersion: 2
+guid: 4847e38582ae5d149b6f47ef5cd16f9b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 657
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801b79b6f398b8e46a405d0012587e7c
+      internalID: -1260481464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 661
+        width: 59
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa4384d2f21e8e458994c32db08c59a
+      internalID: 507025565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 661
+        width: 76
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aff8b276373ada4193a05f0d9ba08e5
+      internalID: 757027051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_3
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 660
+        width: 78
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97775446e06e504092745c6bdfc7784
+      internalID: 504701750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 661
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e40a205b19c364ca3340a8da8beb4c
+      internalID: -812473638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_5
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 578
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb5db26dd2deb04e9fc0a7311144d3d
+      internalID: 1621192893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_6
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 584
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899a286868ead404c90f2588a27d9ec4
+      internalID: 1615198552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_7
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 584
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa89cd605a10fe44b3e5df873cdf627
+      internalID: 214519271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_8
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 586
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5345551c9e3d44e8bdcd1b0961e3c6
+      internalID: -1011575310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 582
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389a2bc1c152c4c4aafcc32b97c44b35
+      internalID: -859861720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_10
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 506
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c17f0acc55003e40815d395dee0f37b
+      internalID: -308195278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_11
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 509
+        width: 76
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d26cb3623ef774499ad8efbb9474525
+      internalID: -1201717475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 509
+        width: 84
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79be9a43253b57d4abf54e6184133021
+      internalID: -1449903269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_13
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 515
+        width: 63
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60756d694e06d194ba921c8f9736e9d1
+      internalID: 790832268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_14
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 506
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d70fa7d385be904fafe5d6585d6d95a
+      internalID: 1689685987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 429
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e17bab075d6eb47bb48a5a1ca9b437
+      internalID: -1902463634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 432
+        width: 65
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b06c1e8c81b09841a49aa6ab0d17dfd
+      internalID: -1864522387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_17
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 431
+        width: 85
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e546f4fc52f0243b834aa136243a10
+      internalID: 1452565916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_18
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 429
+        width: 76
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329b59b648d5a044da56d4db937a8b24
+      internalID: 1535318395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_19
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 428
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf25059ea6e3704bbad552a1da43a21
+      internalID: 65516383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 358
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1407881f9bcc26d4db78c731f8d229c2
+      internalID: -1865028726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_21
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 360
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b2a14a4a86eca47ae24c701d84821c
+      internalID: 824963006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_22
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 363
+        width: 81
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173bf9fa3971d304bad00bcf1e921748
+      internalID: -1921215176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_23
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 363
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73b8d61eafbcf54eb49abad5904a79b
+      internalID: -1068953845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_24
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 362
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfd206ffca8fdb409a4174446ad2c59
+      internalID: 1488410028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 279
+        width: 48
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1982869b2a1674ba11f8a836a189b0
+      internalID: 197838340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_26
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 278
+        width: 68
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a8f988bd8fcec419499a8196597090
+      internalID: 1109107181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_27
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 280
+        width: 87
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2647ce6375ae54d91df0d31c1f740e
+      internalID: 1259426642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_28
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 280
+        width: 70
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851d07e9581b2924e9a860bcdd15a11a
+      internalID: 2074661702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_29
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 280
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9a6e5f993b9994ebfa69ff9d2fdf0f
+      internalID: 63329609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_30
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 203
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48d26e4ffc345f44ad4b9d43829113d
+      internalID: 1468434714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_31
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 201
+        width: 69
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ee8fc181b6795408b615f93a3965e5
+      internalID: 1171356564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_32
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 200
+        width: 88
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c1717f01bc1504ea8616e61464d421
+      internalID: -1815479756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_33
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 199
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d3ddca3853b994894f9558288f0e04
+      internalID: 2055654029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_34
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 197
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92d7fce571727d4caf863ccd4b68d81
+      internalID: 1920079270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_35
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 122
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f248c8fbca5a240b9d75afd1839d68
+      internalID: 1543728385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_36
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 120
+        width: 66
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0c9c4369f883347be08c530b878243
+      internalID: 1319555566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_37
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 121
+        width: 85
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d7e8076d0cb574cb20eb1162cd23ca
+      internalID: 1365220519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_38
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 124
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd51d5599b50d1441ac2cc6a048dd163
+      internalID: -517304339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_39
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 124
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0967eda7445b2694d96324f2093d627d
+      internalID: 593123797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_40
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 33
+        width: 51
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4aa4e158d3e4e40972b411a9368508
+      internalID: -42635157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_41
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 30
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74574c18b6d725d48aecd613c4f5317c
+      internalID: -1522932364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_42
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 98
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84fed57b49de374895c1cf0bcaad5e6
+      internalID: -1982031237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_43
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 32
+        width: 62
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383f64a21a49ffa4ea5f49a52f167228
+      internalID: 1626721554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_44
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 90
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a615972112e06d478ff3805a11e208f
+      internalID: -451466200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_45
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 33
+        width: 68
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ea3a61a5c039f409301af509699f3d
+      internalID: 1761244413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_46
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 55
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671896a26ede59349a88d5e7d4c56f23
+      internalID: -30020720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_47
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 41
+        width: 77
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53729c07bd078043bbcc9b591155a04
+      internalID: -1078167966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hindring_paletted_RGB_48
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 38
+        width: 78
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b71006a6704ba4b89edd246c441eaf
+      internalID: 737043002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9916b4ad8b4a72c4281f9a8458e48c1f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      hindring_paletted_RGB_0: -1260481464
+      hindring_paletted_RGB_1: 507025565
+      hindring_paletted_RGB_10: -308195278
+      hindring_paletted_RGB_11: -1201717475
+      hindring_paletted_RGB_12: -1449903269
+      hindring_paletted_RGB_13: 790832268
+      hindring_paletted_RGB_14: 1689685987
+      hindring_paletted_RGB_15: -1902463634
+      hindring_paletted_RGB_16: -1864522387
+      hindring_paletted_RGB_17: 1452565916
+      hindring_paletted_RGB_18: 1535318395
+      hindring_paletted_RGB_19: 65516383
+      hindring_paletted_RGB_2: 757027051
+      hindring_paletted_RGB_20: -1865028726
+      hindring_paletted_RGB_21: 824963006
+      hindring_paletted_RGB_22: -1921215176
+      hindring_paletted_RGB_23: -1068953845
+      hindring_paletted_RGB_24: 1488410028
+      hindring_paletted_RGB_25: 197838340
+      hindring_paletted_RGB_26: 1109107181
+      hindring_paletted_RGB_27: 1259426642
+      hindring_paletted_RGB_28: 2074661702
+      hindring_paletted_RGB_29: 63329609
+      hindring_paletted_RGB_3: 504701750
+      hindring_paletted_RGB_30: 1468434714
+      hindring_paletted_RGB_31: 1171356564
+      hindring_paletted_RGB_32: -1815479756
+      hindring_paletted_RGB_33: 2055654029
+      hindring_paletted_RGB_34: 1920079270
+      hindring_paletted_RGB_35: 1543728385
+      hindring_paletted_RGB_36: 1319555566
+      hindring_paletted_RGB_37: 1365220519
+      hindring_paletted_RGB_38: -517304339
+      hindring_paletted_RGB_39: 593123797
+      hindring_paletted_RGB_4: -812473638
+      hindring_paletted_RGB_40: -42635157
+      hindring_paletted_RGB_41: -1522932364
+      hindring_paletted_RGB_42: -1982031237
+      hindring_paletted_RGB_43: 1626721554
+      hindring_paletted_RGB_44: -451466200
+      hindring_paletted_RGB_45: 1761244413
+      hindring_paletted_RGB_46: -30020720
+      hindring_paletted_RGB_47: -1078167966
+      hindring_paletted_RGB_48: 737043002
+      hindring_paletted_RGB_5: 1621192893
+      hindring_paletted_RGB_6: 1615198552
+      hindring_paletted_RGB_7: 214519271
+      hindring_paletted_RGB_8: -1011575310
+      hindring_paletted_RGB_9: -859861720
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

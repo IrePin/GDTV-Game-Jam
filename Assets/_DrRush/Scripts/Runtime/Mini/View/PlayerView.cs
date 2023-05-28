@@ -91,6 +91,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 
                 Context.CommandManager.AddCommandListener<InputCommand>(
                     OnInputCommand);
+                
                 _previousPosition = transform.position;
                 _currentScene = SceneManager.GetActiveScene();
                 InputView.inputReader.ClimbEvent += OnClimb;
