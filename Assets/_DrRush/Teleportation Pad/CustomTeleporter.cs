@@ -1,8 +1,11 @@
 using UnityEngine;
-using System.Collections;
+using FMODUnity;
+using _DrRush.Scripts.FMOD;
+
 
 public class CustomTeleporter : MonoBehaviour
 {
+	[SerializeField] private EventReference teleportation;
 	//teleport instantly upon entering trigger?
 	public bool instantTeleport;
 	//teleport to a random pad?
@@ -56,27 +59,12 @@ public class CustomTeleporter : MonoBehaviour
 		//if you chose to teleport instantly
 		if(instantTeleport)
 		{
-			//if you chose instant + random teleport, teleport to a random pad from the array
-			if(randomTeleport)
-			{
-				//choose a random pad from the array
-				int chosenPad = Random.Range(0,destinationPad.Length);
 				//set arrived to true in that array, so it doesnt teleport the subject back
-				destinationPad[chosenPad].GetComponent<CustomTeleporter>().arrived = true;
-				//and teleport the subject
-				subject.transform.position = destinationPad[chosenPad].transform.position + new Vector3(0,teleportationHeightOffset,0);
-				//play teleport sound
-				teleportSound.Play();
-			}
-			else //if not random, teleport to the first one in the array list
-			{
-				//set arrived to true in that array, so it doesnt teleport the subject back
-				destinationPad[0].GetComponent<CustomTeleporter>().arrived = true;
+				//destinationPad[0].GetComponent<CustomTeleporter>().arrived = true;
 				//and teleport the subject
 				subject.transform.position = destinationPad[0].transform.position + new Vector3(0,teleportationHeightOffset,0);
 				//play teleport sound
-				
-			}
+				FmodAudioManager.Instance.PlayOneShot(teleportation, transform.position);
 		}
 		else if(delayedTeleport) //if its a delayed teleport
 		{
@@ -97,7 +85,7 @@ public class CustomTeleporter : MonoBehaviour
 					//teleport
 					subject.transform.position = destinationPad[chosenPad].transform.position + new Vector3(0,teleportationHeightOffset,0);
 					//play teleport sound
-					teleportSound.Play();
+					FmodAudioManager.Instance.PlayOneShot(teleportation, transform.position);
 				}
 				else //if not random, teleport to the first one in the array list
 				{
@@ -106,7 +94,7 @@ public class CustomTeleporter : MonoBehaviour
 					//teleport
 					subject.transform.position = destinationPad[0].transform.position + new Vector3(0,teleportationHeightOffset,0);
 					//play teleport sound
-					teleportSound.Play();
+					FmodAudioManager.Instance.PlayOneShot(teleportation, transform.position);
 				}
 			}
 		}
@@ -135,7 +123,7 @@ public class CustomTeleporter : MonoBehaviour
 							//teleport
 							subject.transform.position = destinationPad[chosenPad].transform.position + new Vector3(0,teleportationHeightOffset,0);
 							//play teleport sound
-							teleportSound.Play();
+							FmodAudioManager.Instance.PlayOneShot(teleportation, transform.position);
 						}
 						else //if not random, teleport to the first one in the array list
 						{
@@ -144,7 +132,7 @@ public class CustomTeleporter : MonoBehaviour
 							//teleport
 							subject.transform.position = destinationPad[0].transform.position + new Vector3(0,teleportationHeightOffset,0);
 							//play teleport sound
-							teleportSound.Play();
+							FmodAudioManager.Instance.PlayOneShot(teleportation, transform.position);
 						}
 					}
 				}
@@ -158,7 +146,7 @@ public class CustomTeleporter : MonoBehaviour
 					//teleport
 					subject.transform.position = destinationPad[chosenPad].transform.position + new Vector3(0,teleportationHeightOffset,0);
 					//play teleport sound
-					teleportSound.Play();
+					FmodAudioManager.Instance.PlayOneShot(teleportation, transform.position);
 				}
 				else
 				{
@@ -167,7 +155,7 @@ public class CustomTeleporter : MonoBehaviour
 					//teleport
 					subject.transform.position = destinationPad[0].transform.position + new Vector3(0,teleportationHeightOffset,0);
 					//play teleport sound
-					teleportSound.Play();
+					FmodAudioManager.Instance.PlayOneShot(teleportation, transform.position);
 				}
 			}
 		}

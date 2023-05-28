@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _DrRush.Scripts.FMOD
 {
     public class FmodAudioChanger : MonoBehaviour
     {
         [Header("Area")]
-        [SerializeField] private MusicArea _area;
+        [SerializeField] private MusicArea area;
 
         private void Start()
         {
-            FmodAudioManager.instance.SetMusicArea(_area);
-            Debug.Log($"[AudioChanger] Set music area {_area}");
+            FmodAudioManager.Instance.SetMusicArea(area);
+            Debug.Log($"[AudioChanger] Set music area {area}");
         }
     }
 }

@@ -290,9 +290,24 @@ MonoBehaviour:
   animator: {fileID: 5735471604907795331}
   characterController: {fileID: 1878126395236862720}
   lights: {fileID: 0}
+  isInputReceived: 0
   speed: 1
   gravity: -9.81
   velocity: {x: 0, y: 0, z: 0}
+  climb:
+    Guid:
+      Data1: -547943858
+      Data2: 1284887445
+      Data3: 2105381561
+      Data4: -1579743758
+    Path: event:/SFX/Climb
+  elShieldOn:
+    Guid:
+      Data1: -1003732293
+      Data2: 1160405301
+      Data3: -1011293769
+      Data4: 1866826081
+    Path: event:/SFX/ElShieldOn
 --- !u!114 &1700578743416444195
 MonoBehaviour:
   m_ObjectHideFlags: 0

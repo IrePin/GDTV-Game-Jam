@@ -1,0 +1,20 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemySpriteLook : MonoBehaviour
+{
+    [SerializeField] private Transform playerTransform;
+    private Transform _targetTransform;
+
+    private void Start()
+    {
+        _targetTransform = playerTransform;
+    }
+
+    private void Update()
+    {
+        transform.LookAt(_targetTransform);
+    }
+}

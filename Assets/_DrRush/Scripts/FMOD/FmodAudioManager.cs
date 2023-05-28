@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
@@ -7,21 +6,35 @@ namespace _DrRush.Scripts.FMOD
 {
     public class FmodAudioManager : MonoBehaviour
     {
-         public static FmodAudioManager instance;
+            public static FmodAudioManager Instance;
         
             public EventInstance PlayerFootsteps { get; private set; }
             
             private EventInstance _ost;
+            
+            private EventInstance _teleportation;
+            
+            private EventInstance _activeTeleport;
+            
+            private EventInstance _buttonClick;
+            
+            private EventInstance _playButtonClick;
+            
+            private EventInstance _climb;
         
+            private EventInstance _elShieldOn;
+
+            private EventInstance _explosion;
+            
             public FmodEvents events;
             [SerializeField] private StudioBankLoader bankLoaderPrefab;
             private StudioBankLoader _bank;
             
             private void Awake()
             {
-                if (instance == null)
+                if (Instance == null)
                 {
-                    instance = this;
+                    Instance = this;
                     _bank = Instantiate(bankLoaderPrefab, transform);
                     InitializePlayerFootsteps();
                     DontDestroyOnLoad(gameObject);
@@ -44,10 +57,10 @@ namespace _DrRush.Scripts.FMOD
 
             private void OnDestroy()
             {
-                if (instance == this)
+                if (Instance == this)
                 {
                     Debug.Log($"Clear instance OnDestroy {gameObject.name}");
-                    instance = null;
+                    Instance = null;
                 }
             }
             public void PlayOneShot(EventReference sound, Vector3 worldPosition)
@@ -60,7 +73,7 @@ namespace _DrRush.Scripts.FMOD
                 EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
                 return eventInstance;
             }
-            
+
             private void InitializePlayerFootsteps()
             {
                 PlayerFootsteps = CreateInstance(events.footsteps);
@@ -71,10 +84,47 @@ namespace _DrRush.Scripts.FMOD
                 _ost = CreateInstance(ostReference);
                 _ost.start();
             }
-            public void SetMusicArea(MusicArea _area)
+            public void SetMusicArea(MusicArea area)
             {
                 //ambience.setParameterByName("AMBIENCE", (float)area);
-                _ost.setParameterByName("MusicArea", (float)_area);
+                _ost.setParameterByName("MusicArea", (float)area);
+                Debug.Log(area);
+            }
+            
+            public void InitializeTeleportation()
+            {
+                _teleportation = CreateInstance(events.Teleportation);
+                _teleportation.start();
+            }
+            
+            public void InitializeButtonClick()
+            {
+                _buttonClick = CreateInstance(events.ButtonClick);
+                _buttonClick.start();
+            }
+            
+            public void InitializePlayButtonClick()
+            {
+                _playButtonClick = CreateInstance(events.PlayButtonClick);
+                _playButtonClick.start();
+            }
+            
+            public void InitializeClimb()
+            {
+                _climb = CreateInstance(events.Climb);
+                _climb.start();
+            }
+            
+            public void InitializeElShieldOn()
+            {
+                _elShieldOn = CreateInstance(events.ElShieldOn);
+                _elShieldOn.start();
+            }
+            
+            public void InitializeExplosion()
+            {
+                _explosion = CreateInstance(events.Explosion);
+                _explosion.start();
             }
     }
 }

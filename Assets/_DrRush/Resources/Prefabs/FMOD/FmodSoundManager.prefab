@@ -73,3 +73,52 @@ MonoBehaviour:
       Data3: 273839017
       Data4: -1942793874
     Path: event:/OST/ost
+  <Teleportation>k__BackingField:
+    Guid:
+      Data1: -1063029444
+      Data2: 1296640937
+      Data3: -526650476
+      Data4: 2063896064
+    Path: event:/SFX/Teleportation
+  <ActiveTeleport>k__BackingField:
+    Guid:
+      Data1: -1855493039
+      Data2: 1188107806
+      Data3: -239053675
+      Data4: 593121444
+    Path: event:/SFX/ActiveTeleport
+  <Climb>k__BackingField:
+    Guid:
+      Data1: -547943858
+      Data2: 1284887445
+      Data3: 2105381561
+      Data4: -1579743758
+    Path: event:/SFX/Climb
+  <ElShieldOn>k__BackingField:
+    Guid:
+      Data1: -1003732293
+      Data2: 1160405301
+      Data3: -1011293769
+      Data4: 1866826081
+    Path: event:/SFX/ElShieldOn
+  <Explosion>k__BackingField:
+    Guid:
+      Data1: -1470869063
+      Data2: 1235634938
+      Data3: -1957519182
+      Data4: 2045111096
+    Path: event:/SFX/Explosion
+  <PlayButtonClick>k__BackingField:
+    Guid:
+      Data1: 669051669
+      Data2: 1122466637
+      Data3: 1253771162
+      Data4: -1446221969
+    Path: event:/SFX/PlayButtonClick
+  <ButtonClick>k__BackingField:
+    Guid:
+      Data1: -295981193
+      Data2: 1235148837
+      Data3: 51322786
+      Data4: 1507978443
+    Path: event:/SFX/ButtonClick

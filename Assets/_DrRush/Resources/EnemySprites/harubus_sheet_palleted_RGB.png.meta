@@ -1,0 +1,1532 @@
+fileFormatVersion: 2
+guid: 2934e9f49cc201d42b7c328740a2d920
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1167
+        width: 85
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471cf87f83f8dd749946323ab3dc673d
+      internalID: 502638986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1169
+        width: 69
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6219b57555b08b14ea29ec3df34f3098
+      internalID: -370056030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_2
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1170
+        width: 82
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0070c68ff05674a8d8c3080064f184
+      internalID: 1191092803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_3
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1167
+        width: 91
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dc76ea868d75d4e85c24103c176be5
+      internalID: -696678235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_4
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1163
+        width: 86
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf12184864d9594b98ba8d3166e8bce
+      internalID: -1652421657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_5
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1057
+        width: 102
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da9d3ce5d1b30544a2f2710a2dc7ec1
+      internalID: 1943576314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1059
+        width: 87
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76059191729854343bcf01c88a7229a4
+      internalID: -1396965893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_7
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1062
+        width: 90
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125835dcdf1f09b4b9c61fd8a8311ccb
+      internalID: -175200379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_8
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1064
+        width: 92
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a96e3b4cb14d341aa4d1c8752a2e7d
+      internalID: 1612161708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_9
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1067
+        width: 93
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc910164e8ac9f479d8879f4cb7ee08
+      internalID: -490529386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 949
+        width: 90
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df89a34a0c0e354b9c347de06e6525e
+      internalID: -2120823522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_11
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 950
+        width: 85
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96eb056e46ef6a64e96f1287b3a31eba
+      internalID: 275182652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_12
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 953
+        width: 81
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd9bc77c7c80a641864ce7b0ab7a560
+      internalID: -468056466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_13
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 954
+        width: 91
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33377ba3b24ae545be69d1c27152103
+      internalID: 517924540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_14
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 955
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544b5849c8a78f74da3c1f8913f37de6
+      internalID: 616714501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_15
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 837
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d02d807c7cf854b864676e4326fa66
+      internalID: -1015123365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 841
+        width: 98
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3f1a57145fbfd4281495a3996254c5
+      internalID: 2041171454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_17
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 843
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5784b73e5c850c14580b90435c0b999e
+      internalID: -918163096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_18
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 845
+        width: 83
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36311356a5c94974db67a04f3dee3bba
+      internalID: 1703072999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_19
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 843
+        width: 87
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2749856f31672ab41bce15c51f959b53
+      internalID: 2128578389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 742
+        width: 89
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b512be252ae033b44b5ebe8bfb20b67c
+      internalID: 788187894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_21
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 741
+        width: 94
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5245be5235a2737478e017d24c695e72
+      internalID: -1107147539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_22
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 746
+        width: 87
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306fa6b5b2df99a4dbad764104449ee2
+      internalID: 892228589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_23
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 743
+        width: 86
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e169db3341a98740b78ebe08238b233
+      internalID: 528099488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_24
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 748
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c321b06001025f245b07d5f6370690d4
+      internalID: 155750134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_25
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 655
+        width: 92
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2bed71bae463c4fa9f8d3dde674313
+      internalID: -2044858554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_26
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 652
+        width: 83
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6269c55524a69f34293667488df5ffa2
+      internalID: 973049230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_27
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 652
+        width: 79
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a771a0e9a4953024d9f3d4535bcced06
+      internalID: -1150453004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_28
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 649
+        width: 84
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0745c364dbab284a83fadb5baa50b92
+      internalID: -1932914532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_29
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 650
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3caa8a61fc372f48b226d76a43a8ef6
+      internalID: -512404868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_30
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 561
+        width: 97
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37530391c117fb64a9645492f40029d5
+      internalID: -1925119458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_31
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 564
+        width: 97
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbd22041ff88cc428dc0ef45f284324
+      internalID: -1444253140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_32
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 565
+        width: 96
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484122cbd709fd348b31331686f4825a
+      internalID: -1065326783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_33
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 560
+        width: 101
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7156f3f25f659dc41b5624b97e632780
+      internalID: 649955436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_34
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 564
+        width: 86
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ac94b5ce3249c4db98cc1534a42062
+      internalID: 521384145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_35
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 467
+        width: 99
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821da013797065941a933a1311a64cff
+      internalID: 1157154459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_36
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 467
+        width: 101
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf26b98339e67b418892899387b9173
+      internalID: -463775721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_37
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 469
+        width: 88
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a227cf41c5a729d43aea3c96dd0af571
+      internalID: -1090476196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_38
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 471
+        width: 94
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b0545241613ea47a18f545c825eaf6
+      internalID: 136905820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_39
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 471
+        width: 95
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510692043539b8b409e3ed1232af8fcc
+      internalID: -219049503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_40
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 376
+        width: 94
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c051055872535b4b82bb1b29b93c48a
+      internalID: 1127418059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_41
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 376
+        width: 95
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2496b05d419e9db4db3afadd4b3d81e3
+      internalID: -494775557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_42
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 375
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6d9e4650592ad42b957a9eb5262d7f
+      internalID: 2018885966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_43
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 373
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cf8228478c7de418ca2e6d3361c898
+      internalID: 1870595343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_44
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 374
+        width: 95
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d44c710a72ff04eb302f2c11c1e70a
+      internalID: 1988924060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_45
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 287
+        width: 107
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6b07f473da7b5429d7c28c803bbfa1
+      internalID: -1406412890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_46
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 289
+        width: 95
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89aa33314f62dc448cf9ac53bcc8ed2
+      internalID: -1343963664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_47
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 288
+        width: 71
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71b2b196dc50c747afaa7b26002cd4e
+      internalID: -687432211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_48
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 288
+        width: 85
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9373c93572be154dbeca8ce7a9837ee
+      internalID: 1730632233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_49
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 289
+        width: 108
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b4ef39d5f5cab4e8783520369fd8d4
+      internalID: 1055391129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_50
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 205
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622b514f4414ba14080d53edb64bc1b3
+      internalID: 2041108689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_51
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 203
+        width: 75
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1dde77ae8b659489e829e12471f592
+      internalID: -1749122805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_52
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 204
+        width: 81
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d355c26f44e52488b3212e16ff5b9f
+      internalID: -1090396881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_53
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 112
+        width: 116
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afb83c3b844cf5429040819a20811cd
+      internalID: 1269405321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_54
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 109
+        width: 111
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f531dae4f56d3974f8a36a463333a863
+      internalID: 1586717252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_55
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 108
+        width: 117
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc10dffe2f6c87f4e8ca04865a1ddcea
+      internalID: 1163363805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_56
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 183
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d3f168976fdd447990828b1a1833b9
+      internalID: 1829960064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_57
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 114
+        width: 119
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bde9a7d0051774ab1ea15a4442c9a1
+      internalID: -1579112975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_58
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 107
+        width: 120
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4fe97cb20b5354b9707c0f4403b754
+      internalID: -1503275235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_59
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 17
+        width: 122
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76df766cb69cb9c4daaf609571b72b34
+      internalID: -274029426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_60
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 24
+        width: 129
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9590c977d0e5b964f8c3e18eb4dd6fc5
+      internalID: 1515846256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_61
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 25
+        width: 129
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b7d78447b8b7e48a66a7b366650fc5
+      internalID: -1439192344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_62
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 22
+        width: 129
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b999d4ca82e40ea49a0ec44f9e73f698
+      internalID: -1198036909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harubus_sheet_palleted_RGB_63
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 20
+        width: 129
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8126df7796dbe048b587e8e5b1e3da2
+      internalID: -612172128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 20d9c6c91cd0cc7449fd32de963339bd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      harubus_sheet_palleted_RGB_0: 502638986
+      harubus_sheet_palleted_RGB_1: -370056030
+      harubus_sheet_palleted_RGB_10: -2120823522
+      harubus_sheet_palleted_RGB_11: 275182652
+      harubus_sheet_palleted_RGB_12: -468056466
+      harubus_sheet_palleted_RGB_13: 517924540
+      harubus_sheet_palleted_RGB_14: 616714501
+      harubus_sheet_palleted_RGB_15: -1015123365
+      harubus_sheet_palleted_RGB_16: 2041171454
+      harubus_sheet_palleted_RGB_17: -918163096
+      harubus_sheet_palleted_RGB_18: 1703072999
+      harubus_sheet_palleted_RGB_19: 2128578389
+      harubus_sheet_palleted_RGB_2: 1191092803
+      harubus_sheet_palleted_RGB_20: 788187894
+      harubus_sheet_palleted_RGB_21: -1107147539
+      harubus_sheet_palleted_RGB_22: 892228589
+      harubus_sheet_palleted_RGB_23: 528099488
+      harubus_sheet_palleted_RGB_24: 155750134
+      harubus_sheet_palleted_RGB_25: -2044858554
+      harubus_sheet_palleted_RGB_26: 973049230
+      harubus_sheet_palleted_RGB_27: -1150453004
+      harubus_sheet_palleted_RGB_28: -1932914532
+      harubus_sheet_palleted_RGB_29: -512404868
+      harubus_sheet_palleted_RGB_3: -696678235
+      harubus_sheet_palleted_RGB_30: -1925119458
+      harubus_sheet_palleted_RGB_31: -1444253140
+      harubus_sheet_palleted_RGB_32: -1065326783
+      harubus_sheet_palleted_RGB_33: 649955436
+      harubus_sheet_palleted_RGB_34: 521384145
+      harubus_sheet_palleted_RGB_35: 1157154459
+      harubus_sheet_palleted_RGB_36: -463775721
+      harubus_sheet_palleted_RGB_37: -1090476196
+      harubus_sheet_palleted_RGB_38: 136905820
+      harubus_sheet_palleted_RGB_39: -219049503
+      harubus_sheet_palleted_RGB_4: -1652421657
+      harubus_sheet_palleted_RGB_40: 1127418059
+      harubus_sheet_palleted_RGB_41: -494775557
+      harubus_sheet_palleted_RGB_42: 2018885966
+      harubus_sheet_palleted_RGB_43: 1870595343
+      harubus_sheet_palleted_RGB_44: 1988924060
+      harubus_sheet_palleted_RGB_45: -1406412890
+      harubus_sheet_palleted_RGB_46: -1343963664
+      harubus_sheet_palleted_RGB_47: -687432211
+      harubus_sheet_palleted_RGB_48: 1730632233
+      harubus_sheet_palleted_RGB_49: 1055391129
+      harubus_sheet_palleted_RGB_5: 1943576314
+      harubus_sheet_palleted_RGB_50: 2041108689
+      harubus_sheet_palleted_RGB_51: -1749122805
+      harubus_sheet_palleted_RGB_52: -1090396881
+      harubus_sheet_palleted_RGB_53: 1269405321
+      harubus_sheet_palleted_RGB_54: 1586717252
+      harubus_sheet_palleted_RGB_55: 1163363805
+      harubus_sheet_palleted_RGB_56: 1829960064
+      harubus_sheet_palleted_RGB_57: -1579112975
+      harubus_sheet_palleted_RGB_58: -1503275235
+      harubus_sheet_palleted_RGB_59: -274029426
+      harubus_sheet_palleted_RGB_6: -1396965893
+      harubus_sheet_palleted_RGB_60: 1515846256
+      harubus_sheet_palleted_RGB_61: -1439192344
+      harubus_sheet_palleted_RGB_62: -1198036909
+      harubus_sheet_palleted_RGB_63: -612172128
+      harubus_sheet_palleted_RGB_7: -175200379
+      harubus_sheet_palleted_RGB_8: 1612161708
+      harubus_sheet_palleted_RGB_9: -490529386
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
-using _DrRush.Scripts.Runtime.Components;
+using _DrRush.Scripts.FMOD;
 using _DrRush.Scripts.Runtime.Mini.Controller.Commands;
 using RMC.Core.Architectures.Mini.Context;
 using RMC.Core.Architectures.Mini.View;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using FMOD.Studio;
+using FMODUnity;
+using UnityEngine.Serialization;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace _DrRush.Scripts.Runtime.Mini.View
 {
@@ -35,9 +38,15 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [SerializeField] private Animator animator;
         [SerializeField] private CharacterController characterController;
         [SerializeField] private GameObject lights;
+        [SerializeField] Transform teleportTarget;
+
+        private bool _isRun;
         private bool _onLedge;
         private bool _isInitialized = false;
+        public bool isInputReceived;
+        
         private IContext _context;
+        
         private Vector2 _currentAnimationBlendVector;
         private Vector2 _animationVelocity;
         private readonly Vector3 _offset = new Vector3(0f, 2.325f, 0.65f);
@@ -47,6 +56,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
 
         private float _velocityY;
         private Vector3 _movement;
+        private Vector3 _previousPosition;
         private float _rotationDamping;
         
         [Header("GroundCheck")]
@@ -54,6 +64,13 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         public Vector3 velocity;
 
         private Scene _currentScene;
+        
+        //FMOD
+        private EventInstance _footsteps;
+        
+        [SerializeField] EventReference climb;
+
+        [SerializeField] private EventReference elShieldOn;
         
 
         
@@ -74,9 +91,11 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 
                 Context.CommandManager.AddCommandListener<InputCommand>(
                     OnInputCommand);
+                _previousPosition = transform.position;
                 _currentScene = SceneManager.GetActiveScene();
                 InputView.inputReader.ClimbEvent += OnClimb;
                 LedgeDetector.OnLedgeDetect += OnLedge;
+                _footsteps = FmodAudioManager.Instance.PlayerFootsteps;
             }
         }
 
@@ -87,6 +106,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
 
         private void OnLedge(Vector3 ledgeForward, Vector3 closestPoint)
         {
+            FmodAudioManager.Instance.PlayOneShot(climb, transform.position);
             StartCoroutine(ClimbCoroutine(closestPoint));
         }
 
@@ -109,7 +129,11 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             {
                 OnPickup.Invoke(pickupComponent);
             }*/
-
+            if (myCollider.CompareTag("Teleport"))
+            {
+                transform.position = teleportTarget.transform.position;
+                Debug.Log("teleported");
+            }
             if (myCollider.CompareTag("ElShield"))
             {
                StartCoroutine(InteractCoroutine());
@@ -123,8 +147,26 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             }
         }
 
-        private void FixedUpdate()
+     private void Update()
+     {
+         
+         Vector3 currentPosition = transform.position;
+         isInputReceived = currentPosition.x != _previousPosition.x;
+         _footsteps.getPlaybackState(out PLAYBACK_STATE playbackState);
+         if (isInputReceived && playbackState == PLAYBACK_STATE.STOPPED)
+         {
+             UpdateFootsteps();
+         }
+         else if(!isInputReceived)
+         {
+             _footsteps.stop(STOP_MODE.IMMEDIATE);
+         }
+         _previousPosition = currentPosition;
+     }
+
+     private void FixedUpdate()
         {
+            
             if (_currentScene.name == "MadHospital")
             { 
                 _movement = transform.position;
@@ -132,7 +174,6 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 AnimationsID();
                 HandleGravity();
                 HandleAnimator();
-            
             }
         }
         protected void OnDisable()
@@ -153,7 +194,12 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             {
                 Vector3 movement = transform.TransformDirection(inputCommand.Value);
                 characterController.Move(movement * Time.deltaTime * speed);
+                
                 Debug.Log(movement);
+            }
+            else
+            {
+                _isRun = false;
             }
 
             if (_currentScene.name == "ShooterScene" && _currentScene.name == "MainMenu" )
@@ -193,8 +239,6 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         }
         private void HandleAnimator()
         {
-            bool isInputReceived = InputView.MoveDirection.x  != 0f || InputView.MoveDirection.y  != 0f;
-
             animator.SetBool(RunID, isInputReceived);
 
             if (isInputReceived)
@@ -208,6 +252,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 _currentAnimationBlendVector = Vector2.SmoothDamp(_currentAnimationBlendVector, new Vector2(0, 0),
                     ref _animationVelocity, 0.1f);
                 animator.SetFloat(HorizontalInputID, _currentAnimationBlendVector.x);
+
             }
         }
         private void RotateCharacter(Vector3 movement)
@@ -217,6 +262,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         }
         IEnumerator ClimbCoroutine(Vector3 closestPoint)
         {
+            isInputReceived = false;
             characterController.enabled = false;
             animator.SetFloat("VelocityX", 0);
             transform.position = closestPoint - (LedgeDetector.transform.position - transform.position) + new Vector3(0.05f,0,0);;
@@ -225,6 +271,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             transform.position = closestPoint + new Vector3(0.1f, 0, 0);
             animator.SetBool("OnLedge", false);
             characterController.enabled = true;
+            isInputReceived = true;
         }
 
         IEnumerator InteractCoroutine()
@@ -235,9 +282,15 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             animator.SetBool("Interact",false);
             yield return new WaitForSeconds(1);
             lights.gameObject.SetActive(true);
+            FmodAudioManager.Instance.PlayOneShot(elShieldOn, transform.position);
             yield return new WaitForSeconds(1);
             characterController.enabled = true;
         }
 
+        private void UpdateFootsteps()
+        {
+            _footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            _footsteps.start();
+        }
     }
 }

@@ -554,7 +554,7 @@ MonoBehaviour:
   sourceProjectPath: ../../../FMOD/DrRush/DrRush.fspro
   sourceBankPath: ../../../FMOD/DrRush/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -577,6 +577,7 @@ MonoBehaviour:
   - Master
   Banks:
   - OST
+  - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

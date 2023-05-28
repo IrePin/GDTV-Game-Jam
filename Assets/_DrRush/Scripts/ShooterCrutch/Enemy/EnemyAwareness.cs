@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyAwareness : MonoBehaviour
 {
-    [SerializeField] private Material aggression;
+    //[SerializeField] private Material aggression;
     [SerializeField] private Transform playerTransform;
     public bool isAggressive = false;
     [SerializeField] private float detectionRadius; // distance within which to detect player
@@ -29,7 +29,7 @@ public class EnemyAwareness : MonoBehaviour
 
         if (isAggressive)
         {
-            meshRenderer.material = aggression;
+            //meshRenderer.material = aggression;
         }
     }
 }

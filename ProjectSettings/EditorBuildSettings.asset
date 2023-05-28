@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_DrRush/Scenes/MadHospital.unity
     guid: 5db87b55462c7d14e8615165536e9664
   - enabled: 1
-    path: Assets/_DrRush/Scenes/CutScene1.unity
+    path: Assets/_DrRush/Scenes/CutSceneOne.unity
     guid: 99642439f3f351b4bbd9bcb2409cf53d
   - enabled: 1
     path: Assets/_DrRush/Scenes/ShooterScene.unity
