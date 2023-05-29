@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1384572625293168525}
   - component: {fileID: 4059505305956930024}
   - component: {fileID: 4644467350093251651}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4010000685010163659}
   - component: {fileID: 5574590375864458388}
   - component: {fileID: 1205300405012715066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerFollowCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,6 +190,37 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!1 &1808703953906233629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6614036617960043000}
+  m_Layer: 9
+  m_Name: Flash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6614036617960043000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808703953906233629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0049266424, y: -0.055000067, z: 1.6009997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1252441053931427231}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2514232726141453053
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,8 +233,8 @@ GameObject:
   - component: {fileID: 4083119160232556285}
   - component: {fileID: 3764175655053358165}
   - component: {fileID: 7027253965815791538}
-  - component: {fileID: 8470263118124643495}
-  m_Layer: 8
+  - component: {fileID: 6528148282878992443}
+  m_Layer: 9
   m_Name: ShooterCapsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -227,7 +258,7 @@ Transform:
   - {fileID: 4010000685010163659}
   - {fileID: 5012969879151141534}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4083119160232556285
 Animator:
@@ -299,7 +330,8 @@ MonoBehaviour:
   topClamp: 90
   bottomClamp: -90
   animator: {fileID: 4083119160232556285}
---- !u!114 &8470263118124643495
+  _sceneTransition: {fileID: 0}
+--- !u!114 &6528148282878992443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,11 +340,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2514232726141453053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca9c24d9531cec42a8f5db82b112ab7, type: 3}
+  m_Script: {fileID: 11500000, guid: 11e1876ddae4a1046b64b5dd5c293c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDie: 1
+  startingHealth: 100
   maxHealth: 100
-  maxArmor: 50
+  replaceWhenDead: 0
+  deadReplacement: {fileID: 0}
+  makeExplosion: 0
+  explosion: {fileID: 0}
+  isPlayer: 1
+  deathCam: {fileID: 0}
 --- !u!1 &4022273095461807255
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9056134182339571353}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerCameraRoot
   m_TagString: CinemachineTarget
   m_Icon: {fileID: 0}
@@ -356,7 +395,7 @@ GameObject:
   - component: {fileID: 1213008597585527550}
   - component: {fileID: 215198576096557061}
   - component: {fileID: 9156478128212414113}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,9 +482,9 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -519,6 +558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol_6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8e4285420384301438074072807cb50a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -547,7 +590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1364088354267941314, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3781895454812601251, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: m_RootOrder
@@ -595,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5490480637142581215, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: damage
@@ -603,16 +646,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: fireRate
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 100002, guid: e840492206edf364baccc15150e2cc63, type: 3}
     - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: smallDamage
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 8470263118124643495}
     - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: gunShotRadius
       value: 10
@@ -622,8 +665,32 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: flashTransform
+      value: 
+      objectReference: {fileID: 6614036617960043000}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: pistolFire.Path
+      value: event:/SHOOTER/PistolFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: enemyLayerMask.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: pistolFire.Guid.Data1
+      value: -1393005133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: pistolFire.Guid.Data2
+      value: 1299927967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: pistolFire.Guid.Data3
+      value: -963279969
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      propertyPath: pistolFire.Guid.Data4
+      value: 348728803
       objectReference: {fileID: 0}
     - target: {fileID: 6350274395844667664, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       propertyPath: raycastLayerMask.m_Bits
@@ -635,6 +702,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6956874964620233890, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4559639335123403468}
+    - targetCorrespondingSourceObject: {fileID: 6956874964620233890, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6614036617960043000}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a4352771379b1842ad5c391243e538d, type: 3}
 --- !u!4 &1252441053931427231 stripped

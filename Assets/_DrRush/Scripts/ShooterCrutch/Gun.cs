@@ -1,13 +1,14 @@
 using _DrRush.Input;
-using _DrRush.Scripts.ShooterCrutch.Enemy;
+using _DrRush.Scripts.FMOD;
+using FMODUnity;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
     [SerializeField] private EnemyManager enemyManager;
-    [SerializeField] private InputReader inputReader;
     [SerializeField] private BoxCollider gunTrigger;
-    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private GameObject muzzleFlash;
+    [SerializeField] private Transform flashTransform;
 
     private float _distance;
     private const float Range = 50F;
@@ -21,6 +22,9 @@ public class Gun : MonoBehaviour
 
     [SerializeField] private LayerMask raycastLayerMask;
     [SerializeField] private LayerMask enemyLayerMask;
+
+
+    [SerializeField] private EventReference pistolFire;
 
     private void Start()
     {
@@ -52,17 +56,21 @@ public class Gun : MonoBehaviour
             {
                 continue;
             }
+
             Debug.Log("enemies");
             var dir = enemy.transform.position - transform.position;
             RaycastHit hitInfo;
 
-            if (Physics.Raycast(this.transform.position, dir, out hitInfo, Range * 0.5f, raycastLayerMask) && hitInfo.transform == enemy.transform)
+            if (Physics.Raycast(this.transform.position, dir, out hitInfo, Range * 0.5f, raycastLayerMask) &&
+                hitInfo.transform == enemy.transform)
             {
                 _distance = Vector3.Distance(enemy.transform.position, transform.position);
                 enemy.TakeDamage(_distance > Range * 0.5f ? smallDamage : damage);
             }
         }
 
+        Instantiate(muzzleFlash, flashTransform.position, flashTransform.rotation);
+        FmodAudioManager.Instance.PlayOneShot(pistolFire, transform.position);
         _nextTimeToFire = Time.time + 1 / fireRate;
     }
 

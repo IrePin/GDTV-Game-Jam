@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3745439211200840346
 MonoBehaviour:
@@ -122,3 +122,31 @@ MonoBehaviour:
       Data3: 51322786
       Data4: 1507978443
     Path: event:/SFX/ButtonClick
+  <PistolFire>k__BackingField:
+    Guid:
+      Data1: -1393005133
+      Data2: 1299927967
+      Data3: -963279969
+      Data4: 348728803
+    Path: event:/SHOOTER/PistolFire
+  <RocketBoost>k__BackingField:
+    Guid:
+      Data1: 1412060616
+      Data2: 1120020886
+      Data3: 1853810873
+      Data4: 1340043308
+    Path: event:/SFX/RocketBoost
+  <RocketLaunch>k__BackingField:
+    Guid:
+      Data1: -6977555
+      Data2: 1150054044
+      Data3: 1792661893
+      Data4: 1879250113
+    Path: event:/SFX/RocketLaunch
+  <BadDream>k__BackingField:
+    Guid:
+      Data1: 141788789
+      Data2: 1108247413
+      Data3: 1429748896
+      Data4: -982501409
+    Path: event:/SFX/BadDream

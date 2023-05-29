@@ -29,5 +29,15 @@ namespace _DrRush.Scripts.FMOD
         [field: Header("Buttons Click")]
         [field: SerializeField] public EventReference ButtonClick { get; private set; }
         
+        [field: Header("Shooter")]
+        [field: Header("PistolFire")]
+        [field: SerializeField] public EventReference PistolFire { get; private set; }
+        [field: Header("RocketBoost")]
+        [field: SerializeField] public EventReference RocketBoost { get; private set; }
+        [field: Header("RocketLaunch")]
+        [field: SerializeField] public EventReference RocketLaunch { get; private set; }
+        
+        [field: SerializeField] public EventReference BadDream { get; private set; }
+        
     }
 }

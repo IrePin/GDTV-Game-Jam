@@ -1,10 +1,15 @@
+using System;
 using System.Collections.Generic;
-using _DrRush.Scripts.ShooterCrutch.Enemy;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
     public List<Enemy> enemiesInTrigger = new List<Enemy>();
+
+    private void Update()
+    {
+    
+    }
 
     public void AddEnemy(Enemy enemy)
     {

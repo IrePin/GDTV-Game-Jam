@@ -1,35 +1,35 @@
 using UnityEngine;
 
-namespace _DrRush.Scripts.ShooterCrutch.Enemy
+public class Enemy : MonoBehaviour
 {
-    public class Enemy : MonoBehaviour
+    [SerializeField] private EnemyManager enemyManager;
+    [SerializeField] private float enemyHealth;
+    [SerializeField] private GameObject damageTakeEffectPrefab;
+    [SerializeField] private Animator spriteAnim;
+    private AngleToPlayer _angleToPlayer;
+    private static readonly int SpriteRotation = Animator.StringToHash("SpriteRotation");
+
+    public float attackRange;
+    private bool attacking;
+
+    void Start()
     {
-        [SerializeField] private EnemyManager enemyManager;
-        [SerializeField] private float enemyHealth;
-        [SerializeField] private GameObject damageTakeEffectPrefab;
-        [SerializeField] private Animator spriteAnim;
-        private AngleToPlayer _angleToPlayer;
-        private static readonly int SpriteRotation = Animator.StringToHash("SpriteRotation");
+        _angleToPlayer = GetComponent<AngleToPlayer>();
+    }
 
-        void Start()
-        {
-            _angleToPlayer = GetComponent<AngleToPlayer>();
-        }
-
-        private void Update()
-        {
-            spriteAnim.SetFloat(SpriteRotation, _angleToPlayer.lastIndex);
-            if (enemyHealth <= 0)
-            {
-                enemyManager.RemoveEnemy(this);
-                Destroy(gameObject);
-            }
-        }
-
-        public void TakeDamage(float damage)
+    private void Update()
+    {
+        spriteAnim.SetFloat(SpriteRotation, _angleToPlayer.lastIndex);
+        if (enemyHealth <= 0)
         {
             Instantiate(damageTakeEffectPrefab, transform.position, transform.rotation);
-            enemyHealth -= damage;
+            enemyManager.RemoveEnemy(this);
+            Destroy(gameObject);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        enemyHealth -= damage;
     }
 }

@@ -1,13 +1,14 @@
 using System;
+using _DrRush.Scripts.FMOD;
 using _DrRush.Scripts.Runtime.Components;
 using _DrRush.Scripts.Runtime.Mini.Controller.Commands;
+using FMOD.Studio;
 using RMC.Core.Architectures.Mini.Context;
 using RMC.Core.Architectures.Mini.View;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
+
 
 
 namespace _DrRush.Scripts.Runtime.Mini.View
@@ -43,7 +44,10 @@ namespace _DrRush.Scripts.Runtime.Mini.View
         [SerializeField] private float bottomClamp = -90.0f;
 
         [SerializeField] private Animator animator;
-
+        [SerializeField] private SceneTransition _sceneTransition;
+        private EventInstance _footsteps;
+        public bool isInputReceived;
+        private Vector3 _previousPosition;
         public void Initialize(IContext context)
         {
             if (!IsInitialized)
@@ -55,6 +59,7 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                     OnInputCommand);
             }
             _currentScene = SceneManager.GetActiveScene();
+            _footsteps = FmodAudioManager.Instance.PlayerFootsteps;
             if (_currentScene.name != "MainMenu")
             {
                 Cursor.lockState = CursorLockMode.Locked;
@@ -69,7 +74,22 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 throw new Exception("MustBeInitialized");
             }
         }
-
+        private void Update()
+        {
+         
+            Vector3 currentPosition = transform.position;
+            isInputReceived = currentPosition.x != _previousPosition.x;
+            _footsteps.getPlaybackState(out PLAYBACK_STATE playbackState);
+            if (isInputReceived && playbackState == PLAYBACK_STATE.STOPPED)
+            {
+                UpdateFootsteps();
+            }
+            else if(!isInputReceived)
+            {
+                _footsteps.stop(STOP_MODE.IMMEDIATE);
+            }
+            _previousPosition = currentPosition;
+        }
         private void LateUpdate()
         {
             HandleGravity();
@@ -94,6 +114,11 @@ namespace _DrRush.Scripts.Runtime.Mini.View
             if (pickupComponent != null)
             {
                 OnPickup.Invoke(pickupComponent);
+            }
+
+            if (myCollider.CompareTag("transition2"))
+            {
+                _sceneTransition.StartCutTwoTransition();
             }
         }
 
@@ -161,6 +186,12 @@ namespace _DrRush.Scripts.Runtime.Mini.View
                 animator.SetBool("Walk", false);
             }
                
+        }
+        
+        private void UpdateFootsteps()
+        {
+            _footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            _footsteps.start();
         }
 
 

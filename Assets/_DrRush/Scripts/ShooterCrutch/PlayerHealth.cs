@@ -1,21 +1,24 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using _DrRush.Input;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
+    public int maxHealth;
     private int _playerHealth;
 
-    [SerializeField] private int maxArmor = 50;
+    public int maxArmor;
     private int _playerArmor;
 
     private void Start()
     {
         _playerHealth = maxHealth;
         _playerArmor = maxArmor;
+    }
+
+    private void Update()
+    {
+        Debug.Log(_playerArmor);
+        Debug.Log(_playerHealth);
     }
 
     public void UpdateDamage(int damage)

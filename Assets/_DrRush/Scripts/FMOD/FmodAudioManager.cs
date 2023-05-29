@@ -1,7 +1,8 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
-   
+using STOP_MODE = FMOD.Studio.STOP_MODE;
+
 namespace _DrRush.Scripts.FMOD
 {
     public class FmodAudioManager : MonoBehaviour
@@ -25,6 +26,14 @@ namespace _DrRush.Scripts.FMOD
             private EventInstance _elShieldOn;
 
             private EventInstance _explosion;
+            
+            private EventInstance _pistolFire;
+            
+            private EventInstance _rocketBoost;
+            
+            private EventInstance _rocketLaunch;
+            
+            private EventInstance _badDream;
             
             public FmodEvents events;
             [SerializeField] private StudioBankLoader bankLoaderPrefab;
@@ -125,6 +134,35 @@ namespace _DrRush.Scripts.FMOD
             {
                 _explosion = CreateInstance(events.Explosion);
                 _explosion.start();
+            }
+            
+            public void InitializePistolFire()
+            {
+                _pistolFire = CreateInstance(events.PistolFire);
+                _pistolFire.start();
+            }
+            
+            public void InitializeRocketBoost()
+            {
+                _rocketBoost = CreateInstance(events.RocketBoost);
+                _rocketBoost.start();
+            }
+            
+            public void InitializeRocketLaunch()
+            {
+                _rocketLaunch = CreateInstance(events.RocketLaunch);
+                _rocketLaunch.start();
+            }
+
+            public void StopRocketBoost()
+            {
+                _rocketBoost.stop(STOP_MODE.IMMEDIATE);
+            }
+            
+            public void InitializeBadDream()
+            {
+                _badDream = CreateInstance(events.BadDream);
+                _badDream.start();
             }
     }
 }

@@ -11,7 +11,6 @@ public class EnemyAwareness : MonoBehaviour
 
     private void Awake()
     {
-        
     }
 
     private void Update()

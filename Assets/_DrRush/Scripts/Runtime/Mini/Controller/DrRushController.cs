@@ -148,7 +148,7 @@ namespace _DrRush.Scripts.Runtime.Mini.Controller
 
             _model.Score.Value = 0;
             _model.ScoreMax.Value = _service.ScoreMax;
-            _model.StatusText.Value = "Use Arrow Keys";
+            _model.StatusText.Value = "Use A and D Keys";
         }
         
         private void InputView_OnInput(Vector3 input)
